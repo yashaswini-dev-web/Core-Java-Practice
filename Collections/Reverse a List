@@ -12,7 +12,7 @@ public class reverseList {
 	list.add(50);
 	System.out.println("The list before reverse"+list);
 	for(int i=list.size()-1;i>=0;i--) {
-		System.out.print(list.get(i) + ",");
+		System.out.print("The List After reverse" + list.get(i) + ",");
 	}
 }
 }
