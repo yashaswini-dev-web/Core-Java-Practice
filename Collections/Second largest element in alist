@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class secondLargInList {
+  public static void main(String[] args) {
+	ArrayList<Integer> list= new ArrayList<>();
+	Scanner sc= new Scanner(System.in);
+	list.add(50);
+	list.add(30);
+	list.add(20);
+	list.add(80);
+	list.add(10);
+	int firstLarge=list.get(0);
+	int secondLarge=list.get(1);
+	  if(list.get(0)>list.get(1)) {
+		  firstLarge=list.get(0);
+		  secondLarge=list.get(1);
+	  }else {
+		  firstLarge=list.get(1);
+		  secondLarge=list.get(0);
+	  }
+	  for(int i=2;i<list.size();i++) {
+		  if(list.get(i)>firstLarge) {
+			  secondLarge=firstLarge;
+			  firstLarge=list.get(i);
+		  }
+		  else if(list.get(i)>secondLarge && list.get(i)!=firstLarge) {
+			  secondLarge=list.get(i);
+		  }
+	  }
+	  System.out.println("Second Largest element in the list is: "+secondLarge);
+  }
+}
